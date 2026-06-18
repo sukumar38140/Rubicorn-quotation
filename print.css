@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Print CSS Stylesheet - Rubicorn Technologies Proposal Page
+   ========================================================================== */
+
+@media print {
+  /* Reset background and colors for clean white paper printing */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Hide interactive web elements */
+  .no-print,
+  #theme-toggle,
+  #download-proposal-btn,
+  .app-header,
+  .timer-banner,
+  .mockup-frame,
+  .plan-selector-toggles,
+  .addons-list,
+  .free-benefit-highlight,
+  .calc-action-area,
+  .roi-sliders,
+  .roi-display-results,
+  .sub-cards-grid,
+  .btn-clear-sig,
+  #agree-terms,
+  .checkbox-container .checkmark,
+  .submit-btn-wrapper,
+  .app-footer,
+  .modal-overlay,
+  .learn-more-link {
+    display: none !important;
+  }
+
+  /* Layout Adjustments */
+  .proposal-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 2rem !important;
+  }
+
+  /* Section Title styling for print */
+  .hero-section {
+    padding-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .proposal-title {
+    font-size: 24pt !important;
+    color: #000 !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .proposal-lead-text {
+    font-size: 12pt !important;
+    color: #333 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
+  }
+
+  /* Pricing Card overrides for print */
+  .hero-pricing-card {
+    border: 1px solid #000 !important;
+    background: none !important;
+    box-shadow: none !important;
+    margin-bottom: 2rem !important;
+    padding: 15pt !important;
+    max-width: 100% !important;
+  }
+
+  .price-row {
+    color: #000 !important;
+  }
+
+  .price-row .price-value {
+    color: #000 !important;
+  }
+
+  .setup-breakdown-box {
+    background: none !important;
+    border: 1px solid #000 !important;
+    padding: 8pt !important;
+    margin-bottom: 8pt !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4pt !important;
+  }
+
+  .breakdown-row {
+    color: #000 !important;
+  }
+
+  .breakdown-row .val {
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+
+  .price-divider {
+    background: #000 !important;
+  }
+
+  .price-row.discount-row {
+    color: #22c55e !important;
+  }
+
+  .price-row.discount-row .price-value {
+    color: #22c55e !important;
+  }
+
+  .price-row.final-row .price-value {
+    color: #b38f1d !important;
+    font-size: 16pt !important;
+  }
+
+  .price-badge-save {
+    background: none !important;
+    color: #000 !important;
+    border: 1px solid #22c55e !important;
+    box-shadow: none !important;
+    font-size: 8pt !important;
+    position: relative !important;
+    top: 0 !important;
+    display: inline-block !important;
+    margin-top: 5pt !important;
+  }
+
+  /* Card Layouts converted to simple panels */
+  .card-glass-bg {
+    background: none !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
+    border-radius: 4px !important;
+  }
+
+  .section-header {
+    text-align: left !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 16pt !important;
+    color: #000 !important;
+  }
+
+  .section-desc {
+    font-size: 10pt !important;
+    color: #555 !important;
+  }
+
+  /* Calculator and ROI layouts in print */
+  .calculator-section {
+    page-break-inside: avoid;
+  }
+
+  .calculator-grid {
+    display: block !important;
+  }
+
+  .calc-config-panel {
+    display: none !important; /* config choices are hidden, we just print the result summary */
+  }
+
+  .calc-result-panel {
+    width: 100% !important;
+    background: none !important;
+    border: 1px solid #000 !important;
+    padding: 15pt !important;
+    box-shadow: none !important;
+  }
+
+  .calc-result-title {
+    font-size: 13pt !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
+  }
+
+  .cost-line {
+    font-size: 10pt !important;
+    color: #333 !important;
+  }
+
+  .cost-line .val {
+    color: #000 !important;
+  }
+
+  .cost-line.promo-line {
+    border: 1px dashed #22c55e !important;
+    background: none !important;
+  }
+
+  /* ROI Section */
+  .roi-section {
+    display: none !important; /* ROI calculator is highly interactive, we hide it in printed document */
+  }
+
+  /* Subscriptions section */
+  .subscriptions-section {
+    page-break-before: always;
+  }
+
+  .sub-plan-card {
+    border: 1px solid #ddd !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 15pt !important;
+    margin-bottom: 1.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  .plan-ribbon {
+    border: 1px solid #b38f1d !important;
+    background: none !important;
+    color: #b38f1d !important;
+  }
+
+  .plan-title {
+    font-size: 14pt !important;
+    color: #000 !important;
+  }
+
+  .plan-price-text {
+    font-size: 18pt !important;
+    color: #000 !important;
+  }
+
+  .plan-features-list li {
+    font-size: 9pt !important;
+    color: #333 !important;
+  }
+
+  /* Table styling */
+  .summary-table-section {
+    page-break-before: always;
+  }
+
+  .proposal-table {
+    border: 1px solid #ddd !important;
+  }
+
+  .proposal-table th {
+    background: #f1f5f9 !important;
+    color: #000 !important;
+    border-bottom: 2px solid #ddd !important;
+    font-size: 9pt !important;
+  }
+
+  .proposal-table td {
+    color: #333 !important;
+    border-bottom: 1px solid #eee !important;
+    font-size: 9pt !important;
+  }
+
+  .proposal-table .grand-total-row td {
+    background: #fdfbf7 !important;
+    border-bottom: 2px solid #b38f1d !important;
+    color: #b38f1d !important;
+  }
+
+  /* Features Grid in print - simple list instead of grid */
+  .features-section {
+    page-break-before: always;
+  }
+
+  .features-grid {
+    display: block !important;
+  }
+
+  .feature-card {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 10pt 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .feature-card::before {
+    display: none !important;
+  }
+
+  .feature-title {
+    font-size: 12pt !important;
+    color: #000 !important;
+    margin-bottom: 2pt !important;
+  }
+
+  .feature-summary {
+    font-size: 10pt !important;
+    color: #444 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .feature-icon-wrapper {
+    display: none !important;
+  }
+
+  /* Signature & Acceptance block in print */
+  .acceptance-section {
+    page-break-before: always;
+  }
+
+  .acceptance-container {
+    border: 1px solid #000 !important;
+    padding: 20pt !important;
+  }
+
+  .form-grid {
+    display: block !important;
+  }
+
+  .form-group {
+    margin-bottom: 15pt !important;
+  }
+
+  .form-group input, .form-group select, .form-group textarea {
+    border: 1px solid #aaa !important;
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .signature-canvas-wrapper {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+  }
+
+  .sig-image-preview {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+  }
+
+  /* Support card */
+  .support-notice-card {
+    border: 1px solid #ddd !important;
+    background: none !important;
+    padding: 10pt !important;
+  }
+
+  .notice-icon {
+    font-size: 16pt !important;
+  }
+
+  /* Avoid page breaks inside sections */
+  section {
+    page-break-inside: avoid;
+  }
+}
