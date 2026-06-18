@@ -388,8 +388,8 @@ body.light-theme .proposal-title {
 
 .price-row.total-row .price-value.text-slashed {
   font-size: 1.25rem;
-  color: var(--text-muted);
-  opacity: 0.8;
+  color: #ffffff;
+  opacity: 1;
   position: relative;
   display: inline-block;
   padding: 0 4px;
