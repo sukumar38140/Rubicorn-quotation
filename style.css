@@ -479,7 +479,7 @@ body.light-theme .setup-breakdown-box {
 .breakdown-row .val {
   font-family: var(--font-title);
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--accent-gold-light);
 }
 
 .price-divider-sub {
@@ -492,12 +492,17 @@ body.light-theme .setup-breakdown-box {
 .breakdown-row.subtotal-row {
   margin-top: 0.25rem;
   font-weight: 700;
-  color: var(--text-main);
-  font-size: 0.85rem;
+  color: #ffffff;
+  font-size: 1.05rem;
 }
 
 .breakdown-row.subtotal-row .lbl {
-  color: var(--text-main);
+  color: #ffffff;
+}
+
+.breakdown-row.subtotal-row .val {
+  color: #ffffff !important;
+  font-size: 1.25rem;
 }
 
 .price-badge-save {
