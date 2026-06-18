@@ -382,12 +382,14 @@ body.light-theme .proposal-title {
 }
 
 .price-row.total-row {
-  color: var(--text-main);
-  font-weight: 600;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-.price-row.total-row .price-value {
-  font-size: 1.35rem;
+.price-row.total-row .price-value.text-slashed {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  opacity: 0.7;
 }
 
 .price-row.discount-row {
@@ -405,10 +407,20 @@ body.light-theme .proposal-title {
   color: var(--text-main);
 }
 
-.price-row.final-row .price-value {
-  font-size: 1.85rem;
+.price-row.final-row.highlight-final {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed rgba(212, 175, 55, 0.3);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  margin-top: 0.5rem;
+}
+
+.price-row.final-row .price-value.text-gold-highlight {
+  font-size: 2.15rem;
+  font-weight: 800;
   color: var(--accent-gold-light);
-  filter: drop-shadow(0 0 4px rgba(var(--accent-gold-rgb), 0.3));
+  filter: drop-shadow(0 0 8px rgba(var(--accent-gold-rgb), 0.4));
+  font-family: var(--font-title);
 }
 
 .price-row.main-category {
@@ -443,6 +455,24 @@ body.light-theme .setup-breakdown-box {
 .breakdown-row .val {
   font-family: var(--font-title);
   font-weight: 700;
+  color: var(--text-main);
+}
+
+.price-divider-sub {
+  height: 1px;
+  background: var(--border-color);
+  margin: 0.5rem 0;
+  border: none;
+}
+
+.breakdown-row.subtotal-row {
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.breakdown-row.subtotal-row .lbl {
   color: var(--text-main);
 }
 

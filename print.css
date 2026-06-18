@@ -103,6 +103,20 @@
     font-weight: bold !important;
   }
 
+  .price-divider-sub {
+    border-top: 1px dashed #000 !important;
+    margin: 4pt 0 !important;
+  }
+
+  .breakdown-row.subtotal-row {
+    font-weight: bold !important;
+    color: #000 !important;
+  }
+
+  .breakdown-row.subtotal-row .lbl {
+    color: #000 !important;
+  }
+
   .price-divider {
     background: #000 !important;
   }
@@ -115,9 +129,21 @@
     color: #22c55e !important;
   }
 
-  .price-row.final-row .price-value {
+  .price-row.total-row .price-value.text-slashed {
+    text-decoration: line-through !important;
+    color: #666 !important;
+  }
+
+  .price-row.final-row.highlight-final {
+    border: 1px dashed #b38f1d !important;
+    padding: 6pt !important;
+    margin-top: 4pt !important;
+  }
+
+  .price-row.final-row .price-value.text-gold-highlight {
     color: #b38f1d !important;
-    font-size: 16pt !important;
+    font-size: 18pt !important;
+    font-weight: bold !important;
   }
 
   .price-badge-save {
