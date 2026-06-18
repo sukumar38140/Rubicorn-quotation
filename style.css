@@ -387,9 +387,33 @@ body.light-theme .proposal-title {
 }
 
 .price-row.total-row .price-value.text-slashed {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
-  opacity: 0.7;
+  opacity: 0.8;
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.price-row.total-row .price-value.text-slashed::before,
+.price-row.total-row .price-value.text-slashed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background-color: var(--text-red); /* Red slash */
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.price-row.total-row .price-value.text-slashed::before {
+  transform: translateY(-50%) rotate(15deg);
+}
+
+.price-row.total-row .price-value.text-slashed::after {
+  transform: translateY(-50%) rotate(-15deg);
 }
 
 .price-row.discount-row {

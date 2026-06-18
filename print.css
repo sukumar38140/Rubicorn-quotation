@@ -130,8 +130,29 @@
   }
 
   .price-row.total-row .price-value.text-slashed {
-    text-decoration: line-through !important;
     color: #666 !important;
+    position: relative !important;
+    display: inline-block !important;
+    padding: 0 2pt !important;
+  }
+
+  .price-row.total-row .price-value.text-slashed::before,
+  .price-row.total-row .price-value.text-slashed::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 50% !important;
+    height: 1.5px !important;
+    background-color: #ef4444 !important;
+  }
+
+  .price-row.total-row .price-value.text-slashed::before {
+    transform: translateY(-50%) rotate(15deg) !important;
+  }
+
+  .price-row.total-row .price-value.text-slashed::after {
+    transform: translateY(-50%) rotate(-15deg) !important;
   }
 
   .price-row.final-row.highlight-final {
